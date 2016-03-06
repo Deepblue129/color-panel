@@ -58,7 +58,16 @@ const common = {
     },
     postcss: function() {
         return [autoprefixer, precss];
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Gallary',
+            devServer: process.env.PORT,
+            inject: true,
+            filename: 'index.html',
+            template: path.join(PATHS.src, 'template.html')
+        })
+    ]=
 };
 
 if (TARGET === 'start' || !TARGET) {
