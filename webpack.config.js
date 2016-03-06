@@ -65,9 +65,9 @@ const common = {
             devServer: process.env.PORT,
             inject: true,
             filename: 'index.html',
-            template: path.join(PATHS.src, 'template.html')
+            template: path.join(PATHS.view, 'template.html')
         })
-    ]=
+    ]
 };
 
 if (TARGET === 'start' || !TARGET) {
