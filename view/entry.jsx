@@ -2,16 +2,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import UploadButton from 'component/index.jsx';
-
-function handleChange(input) 
-{
-	console.log('Uploaded File Changed: ' + input.value);
-}
+import ColorPanel from 'component/index.jsx';
 
 ReactDOM.render(
-	<UploadButton styles={{width: '10em'}} className="btn smple b-gry7 whte txtc" onChange={handleChange.bind(null)}>
-		<p className="whte">Upload</p>
-	</UploadButton>,
+    <ColorPanel colors={['#000', '#333', '#666', '#999', '#ccc', '#fff']} width="15em" height="1.5em" />,
     document.getElementById('entry')
 );
