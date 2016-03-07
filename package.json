@@ -1,6 +1,6 @@
 {
   "name": "color-panel",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "React Color Panel Component",
   "main": "build/Component.js",
   "scripts": {

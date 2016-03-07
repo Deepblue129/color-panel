@@ -21,8 +21,8 @@ const ColorPanel = (props) => {
 }
 
 ColorPanel.propTypes = {
-	height: React.PropTypes.number.isRequired,
-	width: React.PropTypes.number.isRequired,
+	height: React.PropTypes.string.isRequired,
+	width: React.PropTypes.string.isRequired,
 	colors: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
 }
 
