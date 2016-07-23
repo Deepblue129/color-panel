@@ -1,30 +1,29 @@
-'use strict';
+import React, { PropTypes } from 'react';
 
-import React from 'react';
-import './style.scss';
+// eslint-disable-next-line react/prop-types
+const ColorPanel = ({ height, width, colors }) => {
+  const styles = {
+    height,
+    width,
+    display: 'flex',
+  };
 
-const ColorPanel = (props) => {
-	var styles = {
-		height: props.height,
-		width: props.width
-	};
+  return (
+    <div className="color-panel" style={styles}>
+        {colors.map((color, i) =>
+          <div
+            style={{ backgroundColor: color, width: '100%', height: '100%' }}
+            key={`color-panel-color${i}`}
+          >
+          </div>)}
+    </div>
+  );
+};
 
-	return (
-		<div className="color-panel" style={styles}>
-			{props.colors.map(function(color, i) {
-				return (
-					<div style={{backgroundColor : color}} key={'color-panel-color' + i} ></div>
-				);
-			})}
-		</div>
-	)
-}
-
-ColorPanel.propTypes = {
-	height: React.PropTypes.string.isRequired,
-	width: React.PropTypes.string.isRequired,
-	colors: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
-}
+ColorPanel.PropTypes = {
+  height: PropTypes.string.isRequired,
+  width: PropTypes.string.isRequired,
+  colors: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default ColorPanel;
-

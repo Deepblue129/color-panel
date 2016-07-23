@@ -1,10 +1,12 @@
-'use strict';
-
 import React from 'react';
-import ReactDOM from 'react-dom';
-import ColorPanel from 'component/index.jsx';
+import { render } from 'react-dom';
+import ColorPanel from './../build/Component.js';
 
-ReactDOM.render(
-    <ColorPanel colors={['#000', '#333', '#666', '#999', '#ccc', '#fff']} width="15em" height="1.5em" />,
-    document.getElementById('entry')
+render(
+  <ColorPanel
+    colors={['#000', '#333', '#666', '#999', '#ccc', '#fff']}
+    width="15em"
+    height="1.5em"
+  />,
+  document.getElementById('entry')
 );
